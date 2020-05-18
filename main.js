@@ -158,7 +158,6 @@
 
 // console.log(newobj);
 
-
 // 12. get Url
 
 // var a = document.createElement('a');
@@ -191,19 +190,16 @@
 //     segments: a.pathname.replace(/^\//, '').split('/')
 // };
 
-
 // console.log(parse_URL('https://translate.google.com/?hl=en&tab=TT'));
 
-
-
-// 
+//
 // function allKeys(obj) {
 //   if (!isObject(obj)) return [];
 //   var keys = [];
 //   for (var key in obj) keys.push(key);
 //   return keys;
 // }
-// function isObject(obj) 
+// function isObject(obj)
 // {
 //   var type = typeof obj;
 //   return type === 'function' || type === 'object' && !!obj;
@@ -213,7 +209,7 @@
 // }
 // Student.prototype.rollno = true;
 // console.log(allKeys(new Student("Sara", 23)));
-// // 13. 
+// // 13.
 // function allKeys(obj) {
 //   if (typeof obj !== "object") return [];
 //   var keys = [];
@@ -227,7 +223,6 @@
 // }
 // Student.prototype.relationship = true;
 // console.log(allKeys(new Student("Sara", 23)));
-
 
 // // 14. Write a JavaScript function to retrieve all the values of an object's properties.
 // function retrieveValues(obj) {
@@ -247,7 +242,7 @@
 //   }
 //   var result = {};
 //   for (var i in obj) {
-//     result[obj[i]] = i; 
+//     result[obj[i]] = i;
 //   }
 //   console.log(result)
 // }
@@ -325,14 +320,13 @@
 // console.log(demo instanceof Function);
 // console.log(typeof demo)
 
-
 // function detect_data_type(value)
 // {
 // var dtypes = [Function, RegExp, Number, String, Boolean, Object], x, len;
-    
-// if (typeof value === "object" || typeof value === "function") 
+
+// if (typeof value === "object" || typeof value === "function")
 //     {
-//      for (x = 0, len = dtypes.length; x < len; x++) 
+//      for (x = 0, len = dtypes.length; x < len; x++)
 //      {
 //             if (value instanceof dtypes[x])
 //             {
@@ -340,7 +334,7 @@
 //             }
 //       }
 //     }
-    
+
 //     return typeof value;
 // }
 // function demo() {
@@ -357,7 +351,7 @@
 //     if (num < 0) {
 //         num = Math.abs();
 //     }
-//     if (num === 0) {return true} else 
+//     if (num === 0) {return true} else
 //     if (num === 1) {return false} else {
 //         num = num -2;
 //         return evenOrNot(num)
@@ -365,3 +359,26 @@
 // }
 // console.log(evenOrNot(10001));
 
+// function Char_Counts(str1) {
+//   var uchars = {};
+//   str1.replace(/\S/g, function (l) {
+//     uchars[l] = isNaN(uchars[l]) ? 1 : uchars[l] + 1;
+//   });
+//   return uchars;
+// }
+// console.log(Char_Counts('The quick brown fox jumps over the lazy dog'));
+
+// for (var i = 0; i < 5; i++) {
+//   setTimeout(function() { console.log(i); }, i * 1000 );
+// }
+// 16.  Extract unique characters from a string
+function extractUniqueCharacters(str) {
+    var newstr=  "";
+    for (let i=0; i < str.length; i++) {
+        if (newstr.includes(str.charAt(i)) === false) {
+            newstr = newstr + str.charAt(i);
+        }
+    }
+    console.log(newstr)
+}
+extractUniqueCharacters("Tiennguyen van")
