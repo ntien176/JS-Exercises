@@ -372,13 +372,20 @@
 //   setTimeout(function() { console.log(i); }, i * 1000 );
 // }
 // 16.  Extract unique characters from a string
-function extractUniqueCharacters(str) {
-    var newstr=  "";
-    for (let i=0; i < str.length; i++) {
-        if (newstr.includes(str.charAt(i)) === false) {
-            newstr = newstr + str.charAt(i);
-        }
-    }
-    console.log(newstr)
-}
-extractUniqueCharacters("Tiennguyen van")
+// function extractUniqueCharacters(str) {
+//     var newstr=  "";
+//     for (let i=0; i < str.length; i++) {
+//         if (newstr.includes(str.charAt(i)) === false) {
+//             newstr = newstr + str.charAt(i);
+//         }
+//     }
+//     console.log(newstr)
+// }
+// extractUniqueCharacters("Tiennguyen van")
+
+// javascript-recursion-function-exercise-1.php
+// function factorialNumber(x) {
+//     if (x === 0) return 1;
+//     return x * factorialNumber(x-1);
+// }
+// console.log(factorialNumber(5))

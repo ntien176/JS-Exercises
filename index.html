@@ -6,6 +6,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>JS Exercises</title>
   <link rel="stylesheet" href="./style.css">
+  <style>
+    h4 {
+      text-align: justify;
+    }
+  </style>
 </head>
 
 <body>
@@ -15,11 +20,14 @@
 
   <script src="./main.js"></script>
   <script>
-    for (let i = 0; i < 5; i++) {
-      function demo() { console.log(i); }
-      demo()
-      // setTimeout(function () { console.log(i); }, 0);
+    function factorialNumber(x) {
+      if (x === 0) {
+        return 1
+      };
+      return x * factorialNumber(x - 1);
     }
+    console.log(factorialNumber(2));
+    // factorialNumber(5)
   </script>
 </body>
 
