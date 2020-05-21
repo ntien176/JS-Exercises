@@ -16,9 +16,8 @@
 <body>
   <h1>JAVASCRIPT EXERCISES</h1>
   <p id="readingStatus"></p>
-
-
-  <script src="./main.js"></script>
+  <div class="google-map">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2950.229502148743!2d107.56551030644734!3d16.47684226521569!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3141a6d122763801%3A0x7da5793554db76c0!2sHD%20Mobile!5e0!3m2!1sen!2s!4v1590034940747!5m2!1sen!2s" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>  <script src="./main.js"></script>
   <script>
     // function factorialNumber(x) {
     //   if (x === 0) {
@@ -29,7 +28,7 @@
     // console.log(factorialNumber(2));
     // factorialNumber(5)
     function demNguoc(x) {
-      if (x===0) return 1;
+      if (x===0) return 0;
       console.log(x);
       return(demNguoc(x-1))
     }
