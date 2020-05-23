@@ -38,6 +38,7 @@ body::before {
     ),
     url(https://cdn.freecodecamp.org/testable-projects-fcc/images/survey-form-background.jpeg);
   background-size: cover;
+  background-position: center;
   z-index: -1;
 }
 /* body::before {
@@ -117,6 +118,7 @@ body::before {
 #add-comment {
   width: 100%;
   padding: 1rem;
+  font-size: 1.9rem;
 }
 #submit {
   width: 100%;
