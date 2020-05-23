@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,26 +8,105 @@
     <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
     <link rel="stylesheet" href="./style2.css">
 </head>
+
 <body>
     <main id="container">
         <h1 id="title" class="text-center">freeCodeCamp Survey Form</h1>
         <p id="description" class="text-center">Thank you for taking the time to help us improve the platform</p>
         <form id="survey-form">
             <div class="form-group">
-                <label id="label" for="name">Name</label>
+                <label id="name-label" class="label" for="name">Name</label>
                 <input id="name" class="input-data" type="text" placeholder="Enter your name" required>
             </div>
             <div class="form-group">
-                <label id="label" for="email">Email</label>
+                <label id="email-label" class="label" for="email">Email</label>
                 <input id="email" class="input-data" type="email" placeholder="Enter your email" required>
             </div>
             <div class="form-group">
-                <label id="label" for="age">Age (optional)</label>
-                <input id="age" class="input-data" type="number" placeholder="Age" min="10" required>
+                <label id="number-label" class="label" for="age">Age (optional)</label>
+                <input id="number" class="input-data" type="number" placeholder="Age" min="10" max="30" required>
             </div>
-            
-            <input type="submit">
+            <div class="form-group">
+                <label id="label" class="label" for="role">Which option best describes your current role?</label>
+                <select name="role" id="dropdown" class="input-data" required>
+                    <option disabled selected>Select current role</option>
+                    <option value="student">Student</option>
+                    <option value="job">Full-time job</option>
+                    <option value="learner">Full-time learner</option>
+                    <option value="perfectNo">Perfect not to say</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <p class="label">Would you recommend freeCodeCamp to a friend?</p>
+                <div class="recommend-options">
+                    <input class="input-radio" id="definitely" type="radio" name="recommend" value="definitely">
+                    <label for="definitely" class="label-radio">Definitely</label>    
+                </div>
+                <div class="recommend-options">
+                    <input class="input-radio" id="maybe" type="radio" name="recommend" value="maybe">
+                    <label for="maybe" class="label-radio">Maybe</label>    
+                </div>
+                <div class="recommend-options">
+                    <input class="input-radio" id="not-sure" type="radio" name="recommend" value="not-sure">
+                    <label for="not-sure" class="label-radio">Not sure</label>    
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label id="label" class="label" for="role">What is your favorite feature of freeCodeCamp?</label>
+                <select name="role" id="dropdown" class="input-data" required>
+                    <option disabled selected>Select an option</option>
+                    <option value="challenges">Challenges</option>
+                    <option value="projects">Projects</option>
+                    <option value="community">Community</option>
+                    <option value="open-source">Open source</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <p class="label">What would you like to see improved? (Check all that apply)</p>
+                <div class="recommend-options">
+                    <input class="input-checkbox" id="fe-project" type="checkbox" name="improve-idea" value="fe-project">
+                    <label for="fe-project" class="label-radio">Front-end Projects</label>    
+                </div>
+                <div class="recommend-options">
+                    <input class="input-checkbox" id="be-project" type="checkbox" name="improve-idea" value="be-project">
+                    <label for="be-project" class="label-radio">Back-end Projects</label>    
+                </div>
+                <div class="recommend-options">
+                    <input class="input-checkbox" id="data-visual" type="checkbox" name="improve-idea" value="data-visual">
+                    <label for="data-visual" class="label-radio">Data Visualization</label>    
+                </div>
+                <div class="recommend-options">
+                    <input class="input-checkbox" id="challenges" type="checkbox" name="improve-idea" value="challenges">
+                    <label for="challenges" class="label-radio">Challenges</label>    
+                </div>
+                <div class="recommend-options">
+                    <input class="input-checkbox" id="open-source-communication" type="checkbox" name="improve-idea" value="open-source-communication">
+                    <label for="open-source-communication" class="label-radio">Open Source Community</label>    
+                </div>
+                <div class="recommend-options">
+                    <input class="input-checkbox" id="gitter" type="checkbox" name="improve-idea" value="gitter">
+                    <label for="gitter" class="label-radio">Gitter help rooms</label>    
+                </div>
+                <div class="recommend-options">
+                    <input class="input-checkbox" id="videos" type="checkbox" name="improve-idea" value="videos">
+                    <label for="videos" class="label-radio">Videos</label>    
+                </div>
+                <div class="recommend-options">
+                    <input class="input-checkbox" id="meetups" type="checkbox" name="improve-idea" value="meetups">
+                    <label for="meetups" class="label-radio">City Meetups</label>    
+                </div>
+
+            </div>
+            <div class="form-group">
+                <p class="label">Any comments or suggestions?</p>
+                <textarea name="add-comment" id="add-comment" cols="30" rows="7" placeholder="Enter your comment here..."></textarea>
+            </div>
+            <button type="submit" id="submit">Submit</button>
         </form>
     </main>
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
 </body>
+
 </html>
